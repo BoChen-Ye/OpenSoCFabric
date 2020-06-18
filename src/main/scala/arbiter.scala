@@ -110,7 +110,7 @@ class RRArbiterPriority(parms: Parameters) extends Arbiter(parms) {
   pmaxReqs := PArraySorted(pmax)
 
   for (i <- 0 until numPriorityLevels) {
-    hasRequest(i) := PArraySorted(i).toBits.toUInt =/= UInt(0)
+    hasRequest(i) := !(PArraySorted(i).toBits.toUInt === UInt(0))
 	}
 
   for (i <- 0 until numReqs) {
