@@ -17,7 +17,7 @@ class HeadFlit(parms: Parameters) extends FlitCommon(parms) {
 	val packetTypeWidth   = parms.get[Int]("packetTypeWidth")
 	val destCordDim       = parms.get[Int]("destCordDim")
 	val destCordWidth     = parms.get[Int]("destCordWidth")
-	val numPriorityLevels = parms.get[Int]("numPriorityLevels") 
+	val numPriorityLevels = parms.get[Int]("numPriorityLevels")
 	
 	val packetType        = UInt(width = packetTypeWidth)
 	val destination       = Vec.fill(destCordDim){UInt(width = destCordWidth)}

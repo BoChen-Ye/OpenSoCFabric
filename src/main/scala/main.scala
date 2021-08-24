@@ -308,9 +308,12 @@ object OpenSoC {
 														("numVCs"->Hard(numVCs)),
 														("credThreshold"->Hard(1)),
 
-														("queueDepth"->Soft(16)),
+														// ("queueDepth"->Soft(16)),
+														("queueDepth"->Soft(4)),
 
-														("packetIDWidth"->Hard(16)),
+														// ("packetIDWidth"->Hard(16)),
+														// reduced to not have too many pins
+														("packetIDWidth"->Hard(4)),
 														("packetMaxLength"->Hard(16)),
 														("packetWidth"->Hard(32)),
 
@@ -318,7 +321,13 @@ object OpenSoC {
 														("destCordWidth"->Hard(Math.max(log2Up(K.max),log2Up(C)))),
 														("destCordDim"->Hard(Dim + C)),
 
-														("flitIDWidth"->Hard(4)),
+														// MS added
+														("numPriorityLevels"->Hard(8)),
+
+
+														//	("flitIDWidth"->Hard(4)),
+														// reduced to not have too many pins
+														("flitIDWidth"->Hard(2)),
 														("payloadWidth"->Hard(32)),
 														("InputFlitizer"->Soft((parms: Parameters) => new PacketToFlit(parms)))
 														)
