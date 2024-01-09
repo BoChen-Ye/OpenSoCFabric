@@ -1,7 +1,9 @@
 OpenSoC Fabric
 ========
 ## Why I build this REPO of OpenSoCFabric
- After using OpenSoCFabric, I find there are many problems about it and no one to give a clear step to use tool. Therefore, I write this repo for beignner to use OpenSoCFabric.This repo is based on [Schoeberl](https://github.com/schoeberl/OpenSoCFabric). All work of this repo was done by Bochen Ye(Eindhoven University of Technology).
+ After using OpenSoCFabric, I find there are many problems about it and no one to give a clear step to use tool. Therefore, I write this repo for beignner to use OpenSoCFabric.
+ 
+ This repo is based on [Schoeberl](https://github.com/schoeberl/OpenSoCFabric). All work of this repo was done by Bochen Ye(Eindhoven University of Technology).
 
 ## Abstract ##
 Recent advancements in technology scaling have shown a trend towards greater integration with large-scale chips containing thousands of processors connected to memories and other I/O devices using non-trivial network topologies. Software simulation proves insufficient to study the tradeoffs in such complex systems due to slow execution time, whereas hardware RTL development is too time-consuming. We present *OpenSoC Fabric*, an on-chip network generation infrastructure which aims to provide a parameterizable and powerful on-chip network generator for evaluating future high performance computing architectures based on SoC technology. *OpenSoC Fabric* leverages a new hardware DSL, [Chisel](http://chisel.eecs.berkeley.edu/), which contains powerful abstractions provided by its base language, Scala, and generates both software (C++) and hardware (Verilog) models from a single code base. The *OpenSoC Fabric* infrastructure is modeled after existing state-of-the-art simulators, offers large and powerful collections of configuration options, and follows object-oriented design and functional programming to make functionality extension as easy as possible.
