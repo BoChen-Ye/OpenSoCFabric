@@ -32,9 +32,12 @@ Recent advancements in technology scaling have shown a trend towards greater int
 
 2.**Running stack when your NoC bigger than 2x2(SW)**
 - Because it need more time to simulate. E.g. 3x3 NoC need 10 minutes in SW simulation and 4x4 NoC need 30 minutes in SW simulation.
+
 ## File Content
 **main.scala:** define all option.
+
 **toplevel.scala:** define toplevel class.
+
 **topology.scala:** define topology of NoC. It have two mode:Mesh and FlatFly(Flattend Butterfly). Every mode have normal edition and VC edition, so it have totoally 4 mode.
 
 ---
