@@ -6,14 +6,14 @@ Recent advancements in technology scaling have shown a trend towards greater int
 
 ## How to use OpenSoCFabric ##
 1.**Open Linux Shell**
-    If you use windows, you can install [WSL](https://learn.microsoft.com/en-us/windows/wsl/install).
+    - If you use windows, you can install [WSL](https://learn.microsoft.com/en-us/windows/wsl/install).
 
 2.**Install Java11 in Linux**
 
 3.**Install [sbt](https://www.scala-sbt.org/) for Chisel**
 
 4.**Config the command of OpenSoCFabric in doit.sh/dohw.sh**
-    You can find detail of config in [website](https://github.com/LBL-CoDEx/OpenSoCFabric/wiki/Using-and-Compiling-OpenSoC-Fabric) and in **main.scala**.
+    - You can find detail of config in [website](https://github.com/LBL-CoDEx/OpenSoCFabric/wiki/Using-and-Compiling-OpenSoC-Fabric) and in **main.scala**.
 
 5.**Run the bash script in shell**
     ```./doit.sh```
@@ -21,7 +21,7 @@ Recent advancements in technology scaling have shown a trend towards greater int
 
 6.**Run the python script to get result**
     ```./ststPlot.py```
-    For windows user, you can just run **plot.bat**
+    - For windows user, you can just run **plot.bat**
 ---
 ## Copyright ##
 *OpenSoC Fabric*, Copyright (c) 2014, The Regents of the University of California, through Lawrence Berkeley National Laboratory (subject to receipt of any required approvals from the U.S. Dept. of Energy).  All rights reserved.
