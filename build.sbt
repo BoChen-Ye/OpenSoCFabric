@@ -17,3 +17,4 @@ scalaVersion := "2.10.4"
 //libraryDependencies += "edu.berkeley.cs" %% "chisel" % "latest.release"
 libraryDependencies += "edu.berkeley.cs" %% "chisel" % "2.2.27"
 
+

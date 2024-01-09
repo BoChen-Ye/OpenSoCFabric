@@ -1,6 +1,16 @@
 *.class
 *.log
-
+*.cpp
+*.h
+*.o
+*.xlsx
+*.csv
+*.v
+*.xml
+*.vcd
+*.iml
+Makefile
+OpenSoC_CMesh
 # sbt specific
 .cache/
 .history/
