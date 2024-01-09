@@ -36,7 +36,19 @@ Recent advancements in technology scaling have shown a trend towards greater int
 - Because it need more time to simulate. E.g. 3x3 NoC need 10 minutes in SW simulation and 4x4 NoC need 30 minutes in SW simulation.
 
 ## File Content
+**allocator.scala:** 
+
+**arbiter.scala:** define RRarbiter(round robin) and RRarbiter with priority.
+
+**example.scala:** no content.
+
 **main.scala:** define all option.
+
+**regfile.scala:** define a register file used by the router to store head flit information to perform allocation and routing while the head flit itself resides in the input queue.
+
+**routingfunction.scala:** define two routing algrithm. DOR for Mesh and FlatFly.
+
+**switch.scala:** define a mux-based crossbar of variable inputs and outputs.
 
 **toplevel.scala:** define toplevel class.
 
