@@ -46,7 +46,7 @@ Recent advancements in technology scaling have shown a trend towards greater int
 
 **credit.scala:** define credit consumer and generater.
 
-**networkinterface.scala** This class implements synthesizable hardware to divide packets into the appropriate number of flits. It is used with test harnesses that inject packets into the network. It uses an instance of the class "PacketToFlit".
+**networkinterface.scala:** This class implements synthesizable hardware to divide packets into the appropriate number of flits. It is used with test harnesses that inject packets into the network. It uses an instance of the class "PacketToFlit".
 
 **packetQ.scala:** This module implements an injection queue which receives flits from the network endpoints (traffic sources) and injects them to the attached router respecting credits. The queue has a single produces and a single consumer. Flits are sent to the consumer when credits are available.
 
