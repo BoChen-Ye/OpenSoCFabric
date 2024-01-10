@@ -24,6 +24,7 @@ Recent advancements in technology scaling have shown a trend towards greater int
 - run ```./dohw.sh``` to do hardware simulation
 
 6.**Run the python script to get result**
+- Only SW simulation can get csv result and use this Python script.
 - run ```./ststPlot.py```
 - For windows user, you can just run **plot.bat**
 - The result is show in end of [page](https://github.com/LBL-CoDEx/OpenSoCFabric/wiki/Using-and-Compiling-OpenSoC-Fabric).
