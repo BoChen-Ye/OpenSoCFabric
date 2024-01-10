@@ -39,6 +39,8 @@ Recent advancements in technology scaling have shown a trend towards greater int
 ### Top calling
 **main.scala:** define all option.
 
+**toplevel.scala:** define toplevel class.
+
 ### NoC Architecture
 **allocator.scala:** 
 
@@ -61,8 +63,6 @@ Recent advancements in technology scaling have shown a trend towards greater int
 **routingfunction.scala:** define two routing algrithm. DOR for Mesh and FlatFly.
 
 **switch.scala:** define a mux-based crossbar of variable inputs and outputs.
-
-**toplevel.scala:** define toplevel class.
 
 **topology.scala:** define topology of NoC. It have two mode:Mesh and FlatFly(Flattend Butterfly). Every mode have normal edition and VC edition, so it have totoally 4 mode.
 
