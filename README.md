@@ -36,12 +36,10 @@ Recent advancements in technology scaling have shown a trend towards greater int
 - Because it need more time to simulate. E.g. 3x3 NoC need 10 minutes in SW simulation and 4x4 NoC need 30 minutes in SW simulation.
 
 ## File Content
-- Top calling
-
+### Top calling
 **main.scala:** define all option.
 
-- NoC Architecture
-
+### NoC Architecture
 **allocator.scala:** 
 
 **arbiter.scala:** define RRarbiter(round robin) and RRarbiter with priority.
@@ -68,7 +66,7 @@ Recent advancements in technology scaling have shown a trend towards greater int
 
 **topology.scala:** define topology of NoC. It have two mode:Mesh and FlatFly(Flattend Butterfly). Every mode have normal edition and VC edition, so it have totoally 4 mode.
 
-- Test
+### Test
 **CFlatBtfly_RandomTester.scala** and **CFlatBtfly_RandomTester_C2.scala:** define Flatfly radom test.
 
 **CMesh_CombinedTester_VarInjRate.scala:** define 4 traffic pattern: Neighbor, Tornado, Transpose, BitReverse.
@@ -81,8 +79,7 @@ Recent advancements in technology scaling have shown a trend towards greater int
 
 **routerTester.scala:** define VCrouter test.
 
-- I don't know
-
+### I don't know
 **bitunion.scala:**
 
 **busprobe.scala:**
@@ -93,8 +90,7 @@ Recent advancements in technology scaling have shown a trend towards greater int
 
 **Ringbuffer.scala:** define ring buffer.
 
-- No use
-
+### No use
 **example.scala:** no content.
 
 **axi.scala:** define axi bus but no use.
