@@ -3,7 +3,7 @@ OpenSoC Fabric
 ## Why I build this REPO of OpenSoCFabric
  After using OpenSoCFabric, I find there are many problems about it and no one to give a clear step to use tool. Therefore, I write this repo for beignner to use OpenSoCFabric.
  
- This repo is based on [Schoeberl](https://github.com/schoeberl/OpenSoCFabric). All paperwork of this repo was done by Bochen Ye(Eindhoven University of Technology).
+ This repo is based on [Schoeberl](https://github.com/schoeberl/OpenSoCFabric).
 
 ## Abstract ##
 Recent advancements in technology scaling have shown a trend towards greater integration with large-scale chips containing thousands of processors connected to memories and other I/O devices using non-trivial network topologies. Software simulation proves insufficient to study the tradeoffs in such complex systems due to slow execution time, whereas hardware RTL development is too time-consuming. We present *OpenSoC Fabric*, an on-chip network generation infrastructure which aims to provide a parameterizable and powerful on-chip network generator for evaluating future high performance computing architectures based on SoC technology. *OpenSoC Fabric* leverages a new hardware DSL, [Chisel](http://chisel.eecs.berkeley.edu/), which contains powerful abstractions provided by its base language, Scala, and generates both software (C++) and hardware (Verilog) models from a single code base. The *OpenSoC Fabric* infrastructure is modeled after existing state-of-the-art simulators, offers large and powerful collections of configuration options, and follows object-oriented design and functional programming to make functionality extension as easy as possible.
@@ -30,21 +30,33 @@ Recent advancements in technology scaling have shown a trend towards greater int
 
 ## Question
 1.**Increaing JVM heap memory**
-- You can add ```export SBT_OPT="-Xms1024M -Xmx2048M -Xss2M -XX:MaxMetaspaceSize=1024M"``` to fix it.
+- You can add ```export SBT_OPT="-Xms1024M -Xmx2048M -Xss2M -XX:MaxMetaspaceSize=1024M"``` in envionment variables to fix it.
 
 2.**Running stack when your NoC bigger than 2x2(SW)**
 - Because it need more time to simulate. E.g. 3x3 NoC need 10 minutes in SW simulation and 4x4 NoC need 30 minutes in SW simulation.
 
 ## File Content
+- Top calling
+**main.scala:** define all option.
+
+- NoC Architecture
 **allocator.scala:** 
 
 **arbiter.scala:** define RRarbiter(round robin) and RRarbiter with priority.
 
-**example.scala:** no content.
+**credit.scala:** define credit consumer and generater.
 
-**main.scala:** define all option.
+**networkinterface.scala** This class implements synthesizable hardware to divide packets into the appropriate number of flits. It is used with test harnesses that inject packets into the network. It uses an instance of the class "PacketToFlit".
+
+**packetQ.scala:** This module implements an injection queue which receives flits from the network endpoints (traffic sources) and injects them to the attached router respecting credits. The queue has a single produces and a single consumer. Flits are sent to the consumer when credits are available.
+
+**packetToFlit.scala:** This is an abstract class that takes a data structure as input and generates a collection of flits.
 
 **regfile.scala:** define a register file used by the router to store head flit information to perform allocation and routing while the head flit itself resides in the input queue.
+
+**router.scala:** define simplerouter and VCrouter.
+
+**routerStateManager.scala:** define FSM of VCrouter.
 
 **routingfunction.scala:** define two routing algrithm. DOR for Mesh and FlatFly.
 
@@ -53,6 +65,35 @@ Recent advancements in technology scaling have shown a trend towards greater int
 **toplevel.scala:** define toplevel class.
 
 **topology.scala:** define topology of NoC. It have two mode:Mesh and FlatFly(Flattend Butterfly). Every mode have normal edition and VC edition, so it have totoally 4 mode.
+
+- Test
+**CFlatBtfly_RandomTester.scala** and **CFlatBtfly_RandomTester_C2.scala:** define Flatfly radom test.
+
+**CMesh_CombinedTester_VarInjRate.scala:** define 4 traffic pattern: Neighbor, Tornado, Transpose, BitReverse.
+
+**CMesh_Tester_Combined_Packet.scala** and **CMesh_Tester_Combined_Packet_C2.scala:** define packet NoC tester(radom and neighbor).
+
+**CMesh_TraceTester.scala:** record the NoC data and generate CSV file.
+
+**RouterRandomTester.scala:** define random test for router.
+
+**routerTester.scala:** define VCrouter test.
+
+- I don't know
+**bitunion.scala:**
+
+**busprobe.scala:**
+
+**module.scala:**
+
+**parameters.scala:**
+
+**Ringbuffer.scala:** define ring buffer.
+
+- No use
+**example.scala:** no content.
+
+**axi.scala:** define axi bus but no use.
 
 ---
 ## Copyright ##
