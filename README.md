@@ -37,10 +37,15 @@ Recent advancements in technology scaling have shown a trend towards greater int
 - Because it need more time to simulate. E.g. 3x3 NoC need 10 minutes in SW simulation and 4x4 NoC need 30 minutes in SW simulation.
 
 ## File Content
-### Top calling
+### Top level
 **main.scala:** define all option.
 
 **toplevel.scala:** define toplevel class.
+
+### Basic level
+**channel.scala** define the flit class.
+
+**channelq.scala** define injection class.
 
 ### NoC Architecture
 **allocator.scala:** 
