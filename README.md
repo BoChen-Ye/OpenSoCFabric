@@ -47,6 +47,8 @@ Recent advancements in technology scaling have shown a trend towards greater int
 
 **channelq.scala** define injection class.
 
+**module.scala:** this is a built-in Chisel class that all hardware modules must extend.
+
 ### NoC Architecture
 **allocator.scala:** 
 
@@ -89,8 +91,6 @@ Recent advancements in technology scaling have shown a trend towards greater int
 **bitunion.scala:**
 
 **busprobe.scala:**
-
-**module.scala:**
 
 **parameters.scala:**
 
