@@ -49,6 +49,8 @@ Recent advancements in technology scaling have shown a trend towards greater int
 
 **module.scala:** this is a built-in Chisel class that all hardware modules must extend.
 
+**parameters.scala:** define parameter class.
+
 ### NoC Architecture
 **allocator.scala:** 
 
@@ -91,8 +93,6 @@ Recent advancements in technology scaling have shown a trend towards greater int
 **bitunion.scala:**
 
 **busprobe.scala:**
-
-**parameters.scala:**
 
 **Ringbuffer.scala:** define ring buffer.
 
